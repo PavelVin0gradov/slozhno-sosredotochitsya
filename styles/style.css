@@ -2,4 +2,133 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  inline-size: 375px;
+  margin: auto;
+}
+
+.header {
+  position: relative;
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+}
+
+.header__decorative-element {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--accent-color);
+  position: absolute;
+  right: 40px;
+  top: 14px;
+}
+
+.header__decorative-element::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 44px;
+  inline-size: 9px;
+  block-size: 9px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
+
+.header__theme-menu::before {
+  content: "";
+  position: absolute;
+  top: -65px;
+  right: 11px;
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
+  z-index: 2;
+}
+
+.header__theme-menu {
+  position: relative;
+  margin-block-start: 74px;
+  margin-block-end: 66px;
+  padding-inline-end: 11px;
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  gap: 10px;
+}
+
+.header__theme-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 70px;
+  block-size: 26px;
+  border: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--accent-color);
+  background: transparent;
+  text-transform: lowercase;
+  border: none;
+  padding: 0;
+}
+
+.header__main-title {
+  inline-size: 355px;
+  max-block-size: 192px;
+  margin: auto;
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  color: var(--main-title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  align-self: start;
+}
+
+.header__subtitle {
+  position: relative;
+
+  inline-size: 355px;
+  block-size: 117px;
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--subtitle-color);
+  margin: auto;
+  margin-block-start: 55px;
+  margin-block-end: 66px;
+  z-index: 1;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+}
+
+.header__subtitle::after {
+  content: "";
+  position: absolute;
+  top: 148px;
+  left: 0px;
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+  z-index: 2;
 }
