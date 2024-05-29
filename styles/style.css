@@ -69,6 +69,18 @@
   justify-content: center;
   inline-size: 70px;
   block-size: 26px;
+}
+
+.header__theme-menu-item:hover {
+  outline: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-item:active {
+  outline: none;
+  border-block-end: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-item:has(.header__theme-menu-button_active) {
   border: 1px solid var(--accent-color);
 }
 
@@ -131,4 +143,8 @@
   border-inline-start: 1px solid var(--accent-color);
   border-block-end: 1px solid var(--accent-color);
   z-index: 2;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
 }
