@@ -6,5 +6,7 @@
 :root {
   --main-title-color: #db00ff;
   --accent-color: #ff0070;
+  --background-color-main-section: #000028;
   --subtitle-color: #000028;
+  --card-discription-text-color: #F1B2CE;
 }
