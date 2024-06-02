@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/dark.css" />
     <link rel="stylesheet" href="./styles/light.css" />
+    <link rel="stylesheet" href="./styles/768.css" />
+    <link rel="stylesheet" href="./styles/1024.css" />
   </head>
   <body class="page">
     <header class="header decorated-zone">
@@ -44,10 +46,12 @@
         </ul>
       </nav>
       <h1 class="header__main-title">no focus</h1>
-      <h2 class="header__subtitle title-decor">
-        Что делать, когда не можешь делать ничего <br />Или почему нам так
-        сложно сконцентрироваться, особенно когда очень надо
-      </h2>
+      <div class="header__subtitle_container">
+        <h2 class="header__subtitle title-decor">
+          Что делать, когда не можешь делать ничего <br />Или почему нам так
+          сложно сконцентрироваться, особенно когда очень надо
+        </h2>
+      </div>
     </header>
     <main class="content">
       <section class="why">
@@ -127,11 +131,11 @@
           Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
           секунд)
         </h2>
-        <h2 class="how__subtitle title-decor">
-          5 простых (на самом деле не очень) советов
-        </h2>
         <div class="how__cards">
           <div class="how__card">
+            <h2 class="how__subtitle title-decor">
+              5 простых (на самом деле не очень) советов
+            </h2>
             <h3 class="how__card-title title-decor">
               Представьте небо и облака
             </h3>
@@ -191,27 +195,27 @@
         <h2 class="image__title title-decor">А можно в картинках?</h2>
         <div class="image__container">
           <img
-            class="image__sunset"
+            class="image__container-item image__sunset"
             src="./images/sunset.png"
             alt="картинка с восходом солнца"
           />
           <img
-            class="image__ice-cream"
+            class="image__container-item image__ice-cream"
             src="./images/ice-cream.png"
             alt="картинка с изображением мороженного"
           />
           <img
-            class="image__tape"
+            class="image__container-item image__tape"
             src="./images/tape.png"
             alt="картинка с изображением аудио кассеты"
           />
           <img
-            class="image__books"
+            class="image__container-item image__books"
             src="./images/books.png"
             alt="картинка с изображением стопки книг"
           />
           <img
-            class="image__street"
+            class="image__container-item image__street"
             src="./images/street.png"
             alt="картинка с изображением переулка"
           />

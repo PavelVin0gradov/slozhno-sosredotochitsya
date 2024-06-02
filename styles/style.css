@@ -2,7 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  inline-size: 375px;
+  min-inline-size: 375px;
   margin: auto;
 }
 
@@ -139,9 +139,16 @@ button:disabled {
   align-self: start;
 }
 
-.header__subtitle {
+.header__subtitle_container {
   position: relative;
   inline-size: 355px;
+  margin: auto;
+  margin-block-start: 55px;
+  margin-block-end: 66px;
+  z-index: 1;
+}
+
+.header__subtitle {
   block-size: 117px;
   font-family: var(--main-font, sans-serif);
   font-style: normal;
@@ -149,17 +156,13 @@ button:disabled {
   font-size: 18px;
   line-height: 130%;
   color: var(--subtitle-color);
-  margin: auto;
-  margin-block-start: 55px;
-  margin-block-end: 66px;
-  z-index: 1;
 }
 
 .title-decor {
   background-color: var(--accent-color);
 }
 
-.header__subtitle::after {
+.header__subtitle_container::after {
   content: "";
   position: absolute;
   top: 148px;

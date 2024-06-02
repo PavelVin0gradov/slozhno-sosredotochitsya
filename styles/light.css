@@ -26,13 +26,17 @@
     border-block-start: 1px solid var(--coner-element-color);
   }
 
-  .header__subtitle::after {
+  .header__subtitle_container::after {
     border-inline-start: 1px solid var(--coner-element-color);
     border-block-end: 1px solid var(--coner-element-color);
   }
 
   .header__theme-menu-item:has(.header__theme-menu-button_active) {
     border: 1px solid var(--subtitle-color);
+  }
+
+  .header__theme-menu-item:hover {
+    outline: 1px solid var(--subtitle-color);
   }
 
   .header__decorative-element {

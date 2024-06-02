@@ -1,0 +1,34 @@
+@media (width >= 1024px) {
+    .header__theme-menu {
+        inline-size: 95%;
+        display: flex;
+        flex-direction: row;
+        margin-block-start: 20px;
+        margin-block-end: 273px;
+        justify-content: center;
+      }
+
+      .header__theme-menu::before {
+        top: 0px;
+      }
+
+      .header__theme-menu-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .header__subtitle {
+        inline-size: 491px;
+        block-size: 71px;
+      }
+
+      .header__subtitle_container {
+        margin-block-start: 114px;
+        margin-block-end: 134px;
+      }
+
+      .header__subtitle_container::after {
+        top: 160px;
+      }
+  }
