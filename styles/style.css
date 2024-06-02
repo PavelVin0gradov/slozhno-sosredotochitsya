@@ -132,7 +132,7 @@ button:disabled {
   font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 700;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
   line-height: 82.5%;
   color: var(--main-title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
@@ -410,7 +410,7 @@ button:disabled {
   font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 700;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
   line-height: 82.5%;
   color: var(--main-title-color);
   text-shadow: 2px 2px 0 var(--accent-color);

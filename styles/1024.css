@@ -1,34 +1,107 @@
 @media (width >= 1024px) {
-    .header__theme-menu {
-        inline-size: 95%;
-        display: flex;
-        flex-direction: row;
-        margin-block-start: 20px;
-        margin-block-end: 273px;
-        justify-content: center;
-      }
-
-      .header__theme-menu::before {
-        top: 0px;
-      }
-
-      .header__theme-menu-list {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-      }
-
-      .header__subtitle {
-        inline-size: 491px;
-        block-size: 71px;
-      }
-
-      .header__subtitle_container {
-        margin-block-start: 114px;
-        margin-block-end: 134px;
-      }
-
-      .header__subtitle_container::after {
-        top: 160px;
-      }
+  .header__theme-menu {
+    inline-size: 98%;
+    display: flex;
+    flex-direction: row;
+    margin-block-start: 20px;
+    margin-block-end: 273px;
+    justify-content: center;
   }
+
+  .header__theme-menu::before {
+    top: 0px;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .header__subtitle {
+    inline-size: 491px;
+    block-size: 71px;
+  }
+
+  .header__subtitle_container {
+    inline-size: 96%;
+    margin-block-start: 114px;
+    margin-block-end: 134px;
+  }
+
+  .header__subtitle_container::after {
+    top: 160px;
+  }
+
+  .header__main-title {
+    text-shadow: 4px 4px 0 var(--accent-color_light_1024);
+  }
+
+  .why {
+    inline-size: 96%;
+    display: grid;
+    grid-template-columns: 315px 649px;
+    gap: 20px;
+  }
+
+  .why__card-title {
+    inline-size: 100%;
+  }
+
+  .why__card-discription {
+    min-inline-size: 100%;
+  }
+
+  .what__title {
+    inline-size: 315px;
+  }
+
+  .what__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    inline-size: 96%;
+  }
+
+  .what__card-title {
+    inline-size: 100%;
+  }
+
+  .what__card-discription {
+    min-inline-size: 100%;
+  }
+
+  .how {
+    display: grid;
+    inline-size: 97%;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+
+  .how__subtitle {
+    min-inline-size: 100%;
+  }
+
+  .how__card-title {
+    inline-size: 100%;
+  }
+
+  .how__card-description {
+    min-inline-size: 100%;
+  }
+
+  .image__container {
+    inline-size: 96%;
+  }
+
+  .footer__content-phrase {
+    inline-size: 96%;
+    padding-block-start: 379px;
+    padding-block-end: 319px;
+    text-shadow: 2px 2px 0 var(--accent-color_light_1024);
+  }
+
+  .footer__content-phrase::after {
+    top: 785px;
+  }
+}
