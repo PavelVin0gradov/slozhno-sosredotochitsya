@@ -6,6 +6,36 @@
   margin: auto;
 }
 
+a:focus {
+  outline: none;
+}
+
+a:focus-visible {
+  outline: 1px solid;
+}
+
+button:focus {
+  outline: none;
+  border: none;
+}
+
+button:focus-visible {
+  border-block-end: 1px solid;
+}
+
+button:disabled {
+  pointer-events: none;
+}
+
+.link {
+  text-decoration: none;
+  text-shadow: 1px 1px 0 var(--accent-color);
+}
+
+.link:hover {
+  border-block-end: 1px solid;
+}
+
 .header {
   position: relative;
   background-image: url(../images/cover-image-dark.png);
@@ -16,7 +46,7 @@
 }
 
 .header__decorative-element {
-  font-family: "IBM Plex Mono";
+  font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -75,17 +105,14 @@
   outline: 1px solid var(--accent-color);
 }
 
-.header__theme-menu-item:active {
-  outline: none;
-  border-block-end: 1px solid var(--accent-color);
-}
-
 .header__theme-menu-item:has(.header__theme-menu-button_active) {
   border: 1px solid var(--accent-color);
 }
 
 .header__theme-menu-button {
-  font-family: "IBM Plex Mono";
+  font-family: var(--main-font, sans-serif);
+  min-inline-size: 70px;
+  min-block-size: 26px;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -102,7 +129,7 @@
   inline-size: 355px;
   max-block-size: 192px;
   margin: auto;
-  font-family: "IBM Plex Mono";
+  font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -116,7 +143,7 @@
   position: relative;
   inline-size: 355px;
   block-size: 117px;
-  font-family: "IBM Plex Mono";
+  font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -178,7 +205,7 @@
   max-inline-size: 95%;
   padding-block-start: 40px;
   padding-block-end: 20px;
-  font-family: "IBM Plex Mono";
+  font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -188,7 +215,7 @@
 
 .why__card-title {
   min-inline-size: 95%;
-  font-family: "IBM Plex Mono";
+  font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -198,7 +225,7 @@
 
 .why__card-discription {
   max-inline-size: 95%;
-  font-family: "IBM Plex Mono";
+  font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -215,7 +242,7 @@
 
 .what__title {
   max-inline-size: 95%;
-  font-family: "IBM Plex Mono";
+  font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -240,7 +267,7 @@
 
 .what__card-title {
   min-inline-size: 95%;
-  font-family: "IBM Plex Mono";
+  font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -250,7 +277,7 @@
 
 .what__card-discription {
   max-inline-size: 95%;
-  font-family: "IBM Plex Mono";
+  font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -267,7 +294,7 @@
 
 .how__title {
   max-inline-size: 95%;
-  font-family: "IBM Plex Mono";
+  font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -277,7 +304,7 @@
 
 .how__subtitle {
   max-inline-size: 95%;
-  font-family: "IBM Plex Mono";
+  font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -302,7 +329,7 @@
 
 .how__card-title {
   min-inline-size: 95%;
-  font-family: "IBM Plex Mono";
+  font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -312,7 +339,7 @@
 
 .how__card-description {
   max-inline-size: 95%;
-  font-family: "IBM Plex Mono";
+  font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -329,7 +356,7 @@
 }
 
 .image__title {
-  font-family: "IBM Plex Mono";
+  font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -377,13 +404,13 @@
   min-block-size: 668px;
   margin: auto;
   align-items: center;
-  font-family: "IBM Plex Mono";
+  font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
   color: var(--main-title-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .footer__content-phrase::before {
