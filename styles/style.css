@@ -4,6 +4,7 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   min-inline-size: 375px;
   margin: auto;
+  background-attachment: fixed;
 }
 
 a:focus {
@@ -37,6 +38,7 @@ button:disabled {
 }
 
 .header {
+  block-size: 100%;
   position: relative;
   background-image: url(../images/cover-image-dark.png);
   background-position: center;
@@ -397,6 +399,7 @@ button:disabled {
 }
 
 .footer {
+  block-size: 100%;
   background-color: var(--background-color-main-section);
 }
 
