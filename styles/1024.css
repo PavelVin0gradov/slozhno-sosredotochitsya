@@ -34,7 +34,7 @@
   }
 
   .why {
-    min-inline-size: 96%;
+    max-inline-size: 96%;
     display: grid;
     grid-template-columns: 315px 649px;
     gap: 20px;
