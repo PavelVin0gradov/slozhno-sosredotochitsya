@@ -1,12 +1,16 @@
 @media (width >= 1024px) {
-  .header__theme-menu {
-    inline-size: 98%;
-    display: grid;
-    grid-template-rows: 1fr min-content 1fr;
+  .header {
+    min-block-size: 768px;
   }
 
-  .header__theme-menu::before {
-    top: 0px;
+  .header::after {
+    top: 720px;
+    left: 20px;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
   }
 
   .header__theme-menu-list {
@@ -15,50 +19,40 @@
     justify-content: center;
   }
 
-  .header__subtitle {
-    inline-size: 100%;
-    max-inline-size: 491px;
-    block-size: 71px;
-  }
-
-  .header__subtitle_container {
-    inline-size: 96%;
-    /* margin-block-start: 114px;
-    margin-block-end: 134px; */
-  }
-
-  .header__subtitle_container::after {
-    top: 160px;
-  }
-
   .header__main-title {
+    min-inline-size: 759px;
     text-shadow: 4px 4px 0 var(--accent-color_light_1024);
   }
 
+  .header__subtitle_container {
+    min-inline-size: 491px;
+    min-block-size: 71px;
+  }
+
+  .header__subtitle {
+    inline-size: 100%;
+  }
+
   .why {
-    inline-size: 96%;
+    min-inline-size: 96%;
     display: grid;
     grid-template-columns: 315px 649px;
     gap: 20px;
   }
 
-  .why__card-title {
-    inline-size: 100%;
-  }
-
-  .why__card-discription {
-    min-inline-size: 100%;
+  .what {
+    min-inline-size: 96%;
   }
 
   .what__title {
-    inline-size: 315px;
+    min-inline-size: 315px;
   }
 
   .what__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: start;
-    inline-size: 96%;
+    max-inline-size: 100%;
   }
 
   .what__card-title {
@@ -71,8 +65,8 @@
 
   .how {
     display: grid;
-    inline-size: 97%;
-    grid-template-columns: 330px 649px;
+    min-inline-size: 96%;
+    grid-template-columns: 315px 648px;
   }
 
   .how__subtitle {
@@ -88,7 +82,7 @@
   }
 
   .image {
-    padding-block-start: 81px;
+    padding-block-start: 80px;
   }
 
   .image__container {
@@ -99,14 +93,19 @@
     min-inline-size: 96%;
   }
 
+  .footer::before {
+    top: 20px;
+  }
+
+  .footer {
+    min-block-size: 768px;
+  }
+
   .footer__content-phrase {
-    inline-size: 96%;
-    padding-block-start: 379px;
-    padding-block-end: 319px;
     text-shadow: 2px 2px 0 var(--accent-color_light_1024);
   }
 
-  .footer__content-phrase::after {
-    top: 785px;
+  .footer::after {
+    top: 725px;
   }
 }

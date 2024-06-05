@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 * {
-  outline: 1px solid black;
+  outline: 1px solid RED;
 }
 
 .page {
