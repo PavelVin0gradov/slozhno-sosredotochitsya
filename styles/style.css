@@ -8,7 +8,7 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   min-inline-size: 375px;
   margin: auto;
-  background-image: url(../images/cover-image-dark.png);
+  background-image: var(--bg-image);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -81,6 +81,7 @@ button:disabled {
 }
 
 .header__decorative-element {
+  display: var(--rec);
   text-transform: uppercase;
   font-family: var(--main-font, monospace);
   font-style: normal;
@@ -168,7 +169,7 @@ button:disabled {
   font-weight: 700;
   font-size: 18px;
   line-height: 130%;
-  color: var(--subtitle-color);
+  color: var(--subtitle-color-bg);
 }
 
 .title-decor {
@@ -210,7 +211,7 @@ button:disabled {
   font-weight: 700;
   font-size: 18px;
   line-height: 130%;
-  color: var(--accent-color);
+  color: var(--subtitle-color);
 }
 
 .why__card-title {
@@ -220,7 +221,7 @@ button:disabled {
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
-  color: var(--subtitle-color);
+  color: var(--subtitle-color-bg);
 }
 
 .why__card-discription {
@@ -249,7 +250,7 @@ button:disabled {
   font-weight: 700;
   font-size: 18px;
   line-height: 130%;
-  color: var(--accent-color);
+  color: var(--subtitle-color);
 }
 
 .what__cards {
@@ -274,7 +275,7 @@ button:disabled {
   font-weight: 700;
   font-size: 18px;
   line-height: 130%;
-  color: var(--subtitle-color);
+  color: var(--subtitle-color-bg);
 }
 
 .what__card-discription {
@@ -303,7 +304,7 @@ button:disabled {
   font-weight: 700;
   font-size: 18px;
   line-height: 130%;
-  color: var(--accent-color);
+  color: var(--subtitle-color);
 }
 
 .how__subtitle {
@@ -313,7 +314,7 @@ button:disabled {
   font-weight: 700;
   font-size: 18px;
   line-height: 130%;
-  color: var(--subtitle-color);
+  color: var(--subtitle-color-bg);
 }
 
 .how__cards {
@@ -338,7 +339,7 @@ button:disabled {
   font-weight: 400;
   font-size: 18px;
   line-height: 130%;
-  color: var(--subtitle-color);
+  color: var(--subtitle-color-bg);
 }
 
 .how__card-description {
@@ -365,7 +366,7 @@ button:disabled {
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
-  color: var(--subtitle-color);
+  color: var(--subtitle-color-bg);
   min-inline-size: 95%;
 }
 

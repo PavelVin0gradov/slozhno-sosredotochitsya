@@ -9,5 +9,9 @@
   --accent-color: #ff0070;
   --background-color-main-section: #000028;
   --subtitle-color: #000028;
+  --subtitle-color-bg: #000028;
   --card-discription-text-color: #F1B2CE;
+  --accent-color_light_1024: #ff0070;
+  --bg-image: url(../images/cover-image-dark.png);
+  --rec: inline;
 }
