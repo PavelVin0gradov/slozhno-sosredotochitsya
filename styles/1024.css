@@ -1,11 +1,8 @@
 @media (width >= 1024px) {
   .header__theme-menu {
     inline-size: 98%;
-    display: flex;
-    flex-direction: row;
-    margin-block-start: 20px;
-    margin-block-end: 273px;
-    justify-content: center;
+    display: grid;
+    grid-template-rows: 1fr min-content 1fr;
   }
 
   .header__theme-menu::before {
@@ -19,14 +16,15 @@
   }
 
   .header__subtitle {
-    inline-size: 491px;
+    inline-size: 100%;
+    max-inline-size: 491px;
     block-size: 71px;
   }
 
   .header__subtitle_container {
     inline-size: 96%;
-    margin-block-start: 114px;
-    margin-block-end: 134px;
+    /* margin-block-start: 114px;
+    margin-block-end: 134px; */
   }
 
   .header__subtitle_container::after {
@@ -74,8 +72,7 @@
   .how {
     display: grid;
     inline-size: 97%;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
+    grid-template-columns: 330px 649px;
   }
 
   .how__subtitle {
@@ -90,8 +87,16 @@
     min-inline-size: 100%;
   }
 
+  .image {
+    padding-block-start: 81px;
+  }
+
   .image__container {
     inline-size: 96%;
+  }
+
+  .image__title {
+    min-inline-size: 96%;
   }
 
   .footer__content-phrase {

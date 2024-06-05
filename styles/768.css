@@ -1,47 +1,46 @@
 @media (width >= 768px) {
-  .header {
-    justify-items: center;
+  .header::before {
+    top: 20px;
+    right: 20px;
   }
 
-  .header__theme-menu {
-    margin-block-start: 192px;
-    margin-block-end: 173px;
-    padding-inline-end: 20px;
+  .header {
+    min-block-size: 1024px;
+    padding: 20px;
+  }
+
+  .header::after {
+    top: 980px;
+    left: 20px;
+  }
+
+  .header__decorative-element {
+    right: 49px;
+    top: 23px;
+  }
+
+  .header__theme-menu-list {
+    gap: 9px;
   }
 
   .header__main-title {
-    inline-size: 100%;
+    margin-inline-start: -20px;
+    max-inline-size: 577px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     justify-self: start;
   }
 
   .header__subtitle_container {
-    display: flex;
-    inline-size: 95%;
-    margin-block-start: 162px;
-    margin-block-end: 183px;
-    justify-content: end;
-  }
-
-  .header__theme-menu::before {
-    top: -173px;
-    right: 20px;
-  }
-
-  .header__subtitle {
-    inline-size: 364px;
-    block-size: 117px;
-  }
-
-  .header__subtitle_container::after {
-    top: 255px;
+    max-inline-size: 364px;
   }
 
   .why {
     display: grid;
-    grid-template-columns: 217px 496px;
+    grid-template-columns: 236px 472px;
     gap: 20px;
     padding-block-start: 60px;
     justify-content: center;
+    max-inline-size: 95%;
   }
 
   .why__title {
@@ -58,13 +57,13 @@
   }
 
   .what {
+    max-inline-size: 95%;
     padding-block-start: 80px;
   }
 
   .what__title {
-    inline-size: 236px;
+    max-inline-size: 236px;
     align-self: start;
-    margin-inline-start: 22px;
   }
 
   .what__cards {
@@ -72,9 +71,10 @@
   }
 
   .how {
+    max-inline-size: 95%;
     display: grid;
-    grid-template-columns: 240px 494px;
-    gap: 5px;
+    grid-template-columns: 236px 472px;
+    gap: 20px;
     padding-block-start: 80px;
     margin-inline-start: 20px;
     align-self: center;
@@ -87,7 +87,6 @@
 
   .how__subtitle {
     inline-size: 100%;
-    margin-block-end: 10px;
   }
 
   .how__cards {
@@ -96,7 +95,7 @@
 
   .image {
     padding-block-start: 79px;
-    padding-block-end: 0;
+    padding-block-end: 60px;
     gap: 20px;
   }
 
@@ -144,18 +143,21 @@
     max-inline-size: 100%;
   }
 
-  .footer__content-phrase::before {
-    top: 80px;
+  .footer::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .footer {
+    min-block-size: 1024px;
+  }
+
+  .footer::after {
+    top: 980px;
+    left: 20px;
   }
 
   .footer__content-phrase {
-    inline-size: 95%;
-    padding-block-start: 523px;
-    padding-block-end: 462px;
-    justify-content: center;
-  }
-
-  .footer__content-phrase::after {
-    top: 1040px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
