@@ -3,8 +3,8 @@
     min-block-size: 768px;
   }
 
-  .header::after {
-    top: 720px;
+  .decorated-zone::after {
+    top: 725px;
     left: 20px;
   }
 
@@ -67,6 +67,8 @@
     display: grid;
     min-inline-size: 96%;
     grid-template-columns: 315px 648px;
+    justify-content: center;
+    margin: auto;
   }
 
   .how__subtitle {
@@ -93,19 +95,11 @@
     min-inline-size: 96%;
   }
 
-  .footer::before {
-    top: 20px;
-  }
-
   .footer {
     min-block-size: 768px;
   }
 
-  .footer__content-phrase {
+  .footer__main-title {
     text-shadow: 2px 2px 0 var(--accent-color_light_1024);
-  }
-
-  .footer::after {
-    top: 725px;
   }
 }

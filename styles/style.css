@@ -15,45 +15,28 @@
   background-attachment: fixed;
 }
 
-link:focus {
-  outline: none;
-}
-
-link:focus-visible {
-  outline: 1px solid;
-}
-
-button:focus {
-  outline: none;
-  border: none;
-}
-
-button:focus-visible {
-  border-block-end: 1px solid;
-}
-
-button:disabled {
-  pointer-events: none;
-}
-
 .link {
   text-decoration: none;
   text-shadow: 1px 1px 0 var(--accent-color);
 }
 
 .link:hover {
-  border-block-end: 1px solid;
+  border-block-end: 1px solid var(--link-color);
 }
 
-.header::before {
+.link:focus-visible {
+  outline: 1px solid var(--link-color);
+}
+
+.decorated-zone::before {
   content: "";
   position: absolute;
   top: 10px;
   right: 10px;
   inline-size: 25px;
   block-size: 25px;
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--coner-element-color);
+  border-block-start: 1px solid var(--coner-element-color);
   z-index: 2;
 }
 
@@ -68,15 +51,15 @@ button:disabled {
   padding: 10px;
 }
 
-.header::after {
+.decorated-zone::after {
   content: "";
   position: absolute;
   top: 634px;
   left: 10px;
   inline-size: 25px;
   block-size: 25px;
-  border-inline-start: 1px solid var(--accent-color);
-  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--coner-element-color);
+  border-block-end: 1px solid var(--coner-element-color);
   z-index: 2;
 }
 
@@ -118,13 +101,21 @@ button:disabled {
   min-block-size: 26px;
 }
 
+.header__theme-menu-item:focus-visible {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-block-end: 1px solid var(--button-color);
+}
+
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--button-color);
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
-  pointer-events: none;
+  outline: 1px solid var(--button-color);
 }
 
 .header__theme-menu-button {
@@ -136,7 +127,7 @@ button:disabled {
   font-size: 18px;
   line-height: 100%;
   text-align: center;
-  color: var(--accent-color);
+  color: var(--button-color);
   background: transparent;
   text-transform: lowercase;
   border: none;
@@ -146,14 +137,17 @@ button:disabled {
 .header__main-title {
   inline-size: 100%;
   min-inline-size: 355px;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  align-self: start;
+}
+
+.main-title-decor {
   font-family: var(--main-font, monospace);
   font-style: normal;
   font-weight: 700;
   font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
   line-height: 82.5%;
   color: var(--main-title-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
-  align-self: start;
 }
 
 .header__subtitle_container {
@@ -164,20 +158,44 @@ button:disabled {
 
 .header__subtitle {
   align-self: center;
+}
+
+.title-decor {
   font-family: var(--main-font, monospace);
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 130%;
-  color: var(--subtitle-color-bg);
+  color: var(--title-color);
 }
 
-.title-decor {
+.subtitle-decor {
+  font-family: var(--main-font, monospace);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--subtitle-color);
   background-color: var(--accent-color);
 }
 
-.content {
-  background-color: var(--background-color-main-section);
+.card-subtitle-decor {
+  font-family: var(--main-font, monospace);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  background-color: var(--accent-color);
+  color: var(--subtitle-color);
+}
+
+.card-discription-decor {
+  font-family: var(--main-font, monospace);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--card-discription-text-color);
 }
 
 .why {
@@ -206,32 +224,14 @@ button:disabled {
   max-inline-size: 100%;
   padding-block-start: 40px;
   padding-block-end: 20px;
-  font-family: var(--main-font, monospace);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 130%;
-  color: var(--subtitle-color);
 }
 
 .why__card-title {
   min-inline-size: 100%;
-  font-family: var(--main-font, monospace);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 23px;
-  color: var(--subtitle-color-bg);
 }
 
 .why__card-discription {
   max-inline-size: 100%;
-  font-family: var(--main-font, monospace);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 130%;
-  color: var(--card-discription-text-color);
 }
 
 .what {
@@ -245,12 +245,6 @@ button:disabled {
 
 .what__title {
   max-inline-size: 100%;
-  font-family: var(--main-font, monospace);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 130%;
-  color: var(--subtitle-color);
 }
 
 .what__cards {
@@ -270,22 +264,10 @@ button:disabled {
 
 .what__card-title {
   min-inline-size: 100%;
-  font-family: var(--main-font, monospace);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 130%;
-  color: var(--subtitle-color-bg);
 }
 
 .what__card-discription {
   max-inline-size: 100%;
-  font-family: var(--main-font, monospace);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 130%;
-  color: var(--card-discription-text-color);
 }
 
 .how {
@@ -299,22 +281,10 @@ button:disabled {
 
 .how__title {
   max-inline-size: 100%;
-  font-family: var(--main-font, monospace);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 130%;
-  color: var(--subtitle-color);
 }
 
 .how__subtitle {
   max-inline-size: 100%;
-  font-family: var(--main-font, monospace);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 130%;
-  color: var(--subtitle-color-bg);
 }
 
 .how__cards {
@@ -334,22 +304,10 @@ button:disabled {
 
 .how__card-title {
   min-inline-size: 100%;
-  font-family: var(--main-font, monospace);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 130%;
-  color: var(--subtitle-color-bg);
 }
 
 .how__card-description {
   max-inline-size: 100%;
-  font-family: var(--main-font, monospace);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 130%;
-  color: var(--card-discription-text-color);
 }
 
 .image {
@@ -361,12 +319,6 @@ button:disabled {
 }
 
 .image__title {
-  font-family: var(--main-font, monospace);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 23px;
-  color: var(--subtitle-color-bg);
   min-inline-size: 95%;
 }
 
@@ -410,48 +362,33 @@ ul:has(.image__container) {
   max-inline-size: 95%;
 }
 
-.footer::before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  inline-size: 25px;
-  block-size: 25px;
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
-  z-index: 2;
-}
-
 .footer {
   display: flex;
   position: relative;
-  background-color: var(--background-color-main-section);
   max-block-size: 100vh;
   min-block-size: 668px;
   align-items: center;
 }
 
-.footer::after {
-  content: "";
-  position: absolute;
-  top: 632px;
-  left: 10px;
-  inline-size: 25px;
-  block-size: 25px;
-  border-inline-start: 1px solid var(--accent-color);
-  border-block-end: 1px solid var(--accent-color);
-  z-index: 2;
-}
-
-.footer__content-phrase {
+.footer__main-title {
   inline-size: 100%;
   min-inline-size: 355px;
-  font-family: var(--main-font, monospace);
-  font-style: normal;
-  font-weight: 700;
-  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
-  line-height: 82.5%;
-  color: var(--main-title-color);
   text-shadow: 2px 2px 0 var(--accent-color);
   text-align: center;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    --button-color: #353430;
+    --main-title-color: #ffc2e6;
+    --accent-color: #ff8dcb;
+    --title-color: #353430;
+    --subtitle-color: #353430;
+    --link-color: #353430;
+    --card-discription-text-color: #353430;
+    --accent-color_light_1024: #ff0070;
+    --bg-image: url(../images/cover-image-light.png);
+    --rec: none;
+    --coner-element-color: #353430;
+  }
 }

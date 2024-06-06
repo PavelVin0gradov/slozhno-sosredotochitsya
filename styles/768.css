@@ -1,5 +1,5 @@
 @media (width >= 768px) {
-  .header::before {
+  .decorated-zone::before {
     top: 20px;
     right: 20px;
   }
@@ -9,7 +9,7 @@
     padding: 20px;
   }
 
-  .header::after {
+  .decorated-zone::after {
     top: 980px;
     left: 20px;
   }
@@ -78,6 +78,7 @@
     padding-block-start: 80px;
     margin-inline-start: 20px;
     align-self: center;
+    justify-content: center;
   }
 
   .how__title {
@@ -143,21 +144,11 @@
     max-inline-size: 100%;
   }
 
-  .footer::before {
-    top: 20px;
-    right: 20px;
-  }
-
   .footer {
     min-block-size: 1024px;
   }
 
-  .footer::after {
-    top: 980px;
-    left: 20px;
-  }
-
-  .footer__content-phrase {
+  .footer__main-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
