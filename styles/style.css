@@ -111,7 +111,7 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--button-color);
+  outline: 1px solid var(--opacity-outline-button);
 }
 
 .header__theme-menu-button_active {
@@ -132,6 +132,7 @@
   text-transform: lowercase;
   border: none;
   padding: 0;
+  cursor: pointer;
 }
 
 .header__main-title {
@@ -377,18 +378,3 @@ ul:has(.image__container) {
   text-align: center;
 }
 
-@media (prefers-color-scheme: light) {
-  body {
-    --button-color: #353430;
-    --main-title-color: #ffc2e6;
-    --accent-color: #ff8dcb;
-    --title-color: #353430;
-    --subtitle-color: #353430;
-    --link-color: #353430;
-    --card-discription-text-color: #353430;
-    --accent-color_light_1024: #ff0070;
-    --bg-image: url(../images/cover-image-light.png);
-    --rec: none;
-    --coner-element-color: #353430;
-  }
-}

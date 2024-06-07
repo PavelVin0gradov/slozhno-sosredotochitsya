@@ -4,6 +4,7 @@
   переключая тему
 */
 .page.theme_light {
+  --opacity-outline-button: rgba(50, 49, 45, 0.4);
   --button-color: #353430;
   --main-title-color: #ffc2e6;
   --accent-color: #ff8dcb;
@@ -15,4 +16,21 @@
   --bg-image: url(../images/cover-image-light.png);
   --rec: none;
   --coner-element-color: #353430;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    --opacity-outline-button: rgba(50, 49, 45, 0.4);
+    --button-color: #353430;
+    --main-title-color: #ffc2e6;
+    --accent-color: #ff8dcb;
+    --title-color: #353430;
+    --subtitle-color: #353430;
+    --link-color: #353430;
+    --card-discription-text-color: #353430;
+    --accent-color_light_1024: #ff0070;
+    --bg-image: url(../images/cover-image-light.png);
+    --rec: none;
+    --coner-element-color: #353430;
+  }
 }
